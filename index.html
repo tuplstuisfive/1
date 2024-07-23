@@ -162,15 +162,16 @@
 
     <div class="container-lg">
         <div class="row g-5 justify-content-center p-5">
-            <div class="col-lg-4 col-md-6 bg-orange py-4 text-white h5">
+            <div class="col-md-6 col-sm-12 bg-orange py-4 text-white h5">
                 <div class="mx-4">WEB DESIGN</div>
                 <div class="small p-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam recusandae possimus nisi ad, vero, doloribus totam dicta delectus dolores, error labore molestias quod soluta ullam excepturi officiis fuga ipsa cupiditate rerum explicabo quibusdam consectetur. Explicabo quidem tempore nisi porro eos?</div>
                 <div class="small px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae similique dolorum molestiae eius asperiores enim quo voluptates, nemo amet necessitatibus voluptate, facere libero, esse officiis natus expedita dolorem quam nostrum deserunt qui! Cum, accusantium sed.</div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <a href="img/about-img.png" data-fancybox="gallery" data-caption="#1">
+            <div class=" col-md-6 col-sm-12">
+                <a href="img/about-img.png" data-fancybox="gallery"  data-caption="#1">
                     <img src="img/about-img.png" alt="" class="img-fluid rounded" data-aos="fade-up" data-aos-delay="400">
                 </a>
+                  
             </div>
         </div>
     </div>
@@ -221,14 +222,7 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <h5>SOCIAL MEDIA</h5>
-                    <!-- <div class="social-icons">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-twitter"></i></a>
-                        <a href="#"><i class="bi bi-dribbble"></i></a>
-                        <a href="#"><i class="bi bi-pinterest"></i></a>
-                        <a href="#"><i class="bi bi-behance"></i></a>
-                        <a href="#"><i class="bi bi-github"></i></a>
-                    </div> -->
+                 
                 </div>
                 <div class="col-md-4">
                     <h5>SUBSCRIBE NOW</h5>
@@ -254,22 +248,26 @@
         document.addEventListener("DOMContentLoaded", function () {
             new Splide(".splide", {
                 perMove: 1,
-                pagination: false,
+                pagination: !1,
                 perPage: 4,
                 gap: "1.5rem",
                 breakpoints: {
-                    767: { perPage: 3 },
-                    575: { perPage: 2 }
+                    767: { perPage: 3, },
+                    575: { perPage: 2, }
                 }
-            }).mount();
-
-            AOS.init({
-                once: true,
-            });
-
-            Fancybox.bind("[data-fancybox]", {});
+            }).mount()
         });
     </script>
+
+
+<script>
+    AOS.init({
+        once: true,
+    });
+    Fancybox.bind("[data-fancybox]", {
+        
+    });
+</script>
 </body>
 
 </html>
